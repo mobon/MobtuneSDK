@@ -9,42 +9,5 @@
         android:id="@+id/webview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="60dp"
         />
-
-    <Button
-        android:id="@+id/btnNextSub1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_alignParentBottom="true"
-        android:text="mcover"
-        android:visibility="visible"
-        />
-
-    <Button
-        android:id="@+id/btnNextSub2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/btnNextSub1"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_alignParentBottom="true"
-        android:text="show cookie"
-        android:visibility="visible" />
-
-    <Button
-        android:id="@+id/btnNextSub3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/btnNextSub2"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_alignParentBottom="true"
-        android:text="PUSH_TEST"
-        android:visibility="visible" />
-
-
-
 </RelativeLayout>
