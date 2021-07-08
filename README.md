@@ -36,24 +36,6 @@ dependencies {
 }
 ```
 
-** Android 9 (Pie) 업데이트에 따른 추가설정
-
-- targetSdkVersion 28 부터 네트워크 통신 시 암호화 되지 않은 HTTP통신이 차단되도록 기본설정이
-변경되었습니다. SDK 내 모든 미디에이션 광고가 정상동작하기 위해서는 HTTP 통신을 허용해주셔야 하며, 방법은 아래와 같습니다.
-
-AndroidManifest.xml 파일에서 application 항목의 속성값으로
-usesCleartextTraffic을 true로 설정해야 합니다.
-(Android 9 부터 해당값이 default로 false 설정되어 HTTP 통신이 제한됩니다.)
-
-```
-<manifest ...>
-<application
-...
-android:usesCleartextTraffic="true"
-...>
-</application>
-</manifest>
-```
 
 ## 2. Mobtune SDK 선언
  - Application 에 sdk 초기화와 ActivityLifecycleCallback을 등록합니다.
