@@ -55,7 +55,7 @@ android:usesCleartextTraffic="true"
 </manifest>
 ```
 
-## 2. Mobon SDK 선언
+## 2. Mobtune SDK 선언
  - Application 에 sdk 초기화와 ActivityLifecycleCallback을 등록합니다.
 
 ```java
@@ -73,7 +73,7 @@ public class MyApplication extends Application {
 
 ```
 
-## 3.Hybrid 앱
+## 3.Hybrid 
  - Hybrid 앱의 경우 생성한 WebView 객체를 SDK 에 넘겨주셔야 더욱 정확한 사용자 추적을 할 수 있습니다.
  
  ```java
