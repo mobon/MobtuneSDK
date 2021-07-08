@@ -65,5 +65,5 @@ public class MyApplication extends Application {
         setContentView(R.layout.activity_main);
 
         webview = findViewById(R.id.webview);
-        MobtuneSDK.setWebView(webview); // hybrid 앱에서 setWebview() 호출은 필수 입니다.
+        MobtuneSDK.setWebView(webview); // add code
 ```
