@@ -55,7 +55,7 @@ public class MyApplication extends Application {
 
 ```
 
-## 3.Hybrid 
+## 3.Hybrid App
  - Hybrid 앱의 경우 생성한 WebView 객체를 SDK 에 넘겨주셔야 더욱 정확한 사용자 추적을 할 수 있습니다.
  
  ```java
