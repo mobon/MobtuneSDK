@@ -27,7 +27,7 @@ allprojects {
 }
 ```
 
-- app build.gradle 에 mobtuneSDK 라이브러리를 추가합니다.
+- app build.gradle 에 mobtuneSDK,installreferrer 라이브러리를 추가합니다.
 ```XML
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
