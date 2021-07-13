@@ -48,7 +48,7 @@ public class MyApplication extends Application {
 
         MobtuneSDK.init(this,"YOUR_APP_KEY"); // 등록한 app key를 넣어주세요.
         if (Build.VERSION.SDK_INT >= 14) {
-            registerActivityLifecycleCallbacks(new MobtuneLifecycleCallbacks());
+            registerActivityLifecycleCallbacks(new MobtuneLifecycleCallbacks(this));
         }
     }
 }
