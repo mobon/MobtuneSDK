@@ -11,7 +11,7 @@ public class GlobalApplication extends Application {
     @Override public void onCreate() {
         super.onCreate();
 
-        MobtuneSDK.init(this,"testSDK");
+        MobtuneSDK.init(this,"YOUR-APP-KEY");
         if (Build.VERSION.SDK_INT >= 14) {
             registerActivityLifecycleCallbacks(new MobonLifecycleCallbacks(this));
         }
