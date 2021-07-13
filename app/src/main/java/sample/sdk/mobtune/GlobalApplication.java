@@ -13,7 +13,7 @@ public class GlobalApplication extends Application {
 
         MobtuneSDK.init(this,"testSDK");
         if (Build.VERSION.SDK_INT >= 14) {
-            registerActivityLifecycleCallbacks(new MobonLifecycleCallbacks());
+            registerActivityLifecycleCallbacks(new MobonLifecycleCallbacks(this));
         }
     }
 }
