@@ -25,7 +25,7 @@ public class MainActivity extends FragmentActivity {
 
         webview = findViewById(R.id.webview);
 
-        MobtuneSDK.setWebView(webview); // hybrid 앱에서 setWebview() 호출은 필수 입니다.
+        MobtuneSDK.setWebView(webview); // hybrid app 시
 
         WebSettings settings = webview.getSettings();
         settings.setJavaScriptEnabled(true);
