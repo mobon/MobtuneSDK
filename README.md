@@ -73,8 +73,8 @@ public class MyApplication extends Application {
 ## 4.사용자 이벤트 
 
 - 결제 이벤트
-   사용자의 결제 이벤트를 추적합니다.
-   아래 코드는 필수값들이니 빠짐없이 채워주시기 바랍니다.
+  - 사용자의 결제 이벤트를 추적합니다.
+  - 아래 코드는 필수값들이니 빠짐없이 채워주시기 바랍니다.
   
  ```java
   ProductItem product_1 = new ProductItem().setProductId("test_product_1").setProductName("뽑기 셋트").setPrice(1000000).setQuantity(5);
