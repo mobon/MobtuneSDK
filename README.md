@@ -5,7 +5,7 @@ Mobtune SDK 를 이용하여 통해 고객 흐름 파악 및 이용자 분석, �
 # Mobtune Android SDK Release History
  |version|Description|
 |---|:---:|
-|0.9.4|결제 이벤트 추가|
+|0.9.6|결제 이벤트 추가|
 |0.8.9|deeplink 이벤트 추가|
 |0.8.0|최초 라이브러리 버전|
 
@@ -34,7 +34,7 @@ allprojects {
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
   implementation 'com.android.installreferrer:installreferrer:1.1' // add library
-  implementation 'io.github.mobon:MobtuneSDK:0.9.4' // add library
+  implementation 'io.github.mobon:MobtuneSDK:0.9.6' // add library
 }
 ```
 
