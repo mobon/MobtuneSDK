@@ -100,3 +100,12 @@ public class MyApplication extends Application {
                         .setAttribute(MobtuneParameter.PRODUCTS, product);
                 MobtuneSDK.setEvent(MobtuneEvent.ORDER, param);
 ```
+
+## 5. 그 외 설정
+- 화면 수집 제외 
+  - 수집하지 않을 activity 를 설정하시면 수집에서 제외처리합니다.
+
+ ```java
+ MobtuneSDK.setIgnoreActivity("MainActivity");
+ MobtuneSDK.setIgnoreActivity("com.sample.MainActivity"); // 같은 이름의 activity 가 있을 경우 패키지명까지 명시...
+ ```
