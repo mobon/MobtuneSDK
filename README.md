@@ -77,13 +77,13 @@ public class MyApplication extends Application {
   - 아래 코드는 필수값들이니 빠짐없이 채워주시기 바랍니다.
   
  ```java
-  ProductItem product_1 = new ProductItem()
+  ProductItem productItem1 = new ProductItem()
                           .setProductId("test_product_1") // 상품 아이디
                           .setProductName("뽑기 셋트") //상품명
                           .setPrice("1000000") //상품 가격
                           .setQuantity("5"); //상품 개수
                           
-  ProductItem product_2 = new ProductItem()
+  ProductItem productItem2 = new ProductItem()
                           .setProductId("test_product_2")
                           .setProductName("구슬치기")
                           .setPrice("55000")
@@ -92,7 +92,7 @@ public class MyApplication extends Application {
   ProductInfo product = new ProductInfo()
                         .setPaymentMethod(MobtuneParameter.PaymentType.CREDITCARD) //결제방법
                         .setTotalPrice("5550000") // 총 합계금액
-                        .setProductItems(product_1,product_2) // 생성한 상품 데이터를(ProductItem) 넣어주세요.
+                        .setProductItems(productItem1,productItem2) // 생성한 상품 데이터를(ProductItem) 넣어주세요.
                         .setOrderId("test_orderId") //order ID
                         .build();
 
