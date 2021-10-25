@@ -96,9 +96,8 @@ public class MyApplication extends Application {
                         .setOrderId("test_orderId") //order ID
                         .build();
 
-                EventParam param = new EventParam()
-                        .setAttribute(MobtuneParameter.PRODUCTS, product);
-                MobtuneSDK.setEvent(MobtuneEvent.ORDER, param);
+  MobtuneSDK.setEvent(MobtuneEvent.ORDER, new EventParam().setAttribute(MobtuneParameter.PRODUCTS, product));
+                
 ```
 
 ## 5. 그 외 설정
