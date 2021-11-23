@@ -5,7 +5,7 @@ Mobtune SDK 를 이용하여 통해 고객 흐름 파악 및 이용자 분석, �
 # Mobtune Android SDK Release History
  |version|Description|
 |---|:---:|
-|0.9.7|결제 이벤트 추가|
+|0.9.8|결제 이벤트 추가,androidId 수집 추가|
 |0.8.9|deeplink 이벤트 추가|
 |0.8.0|최초 라이브러리 버전|
 
@@ -107,4 +107,11 @@ public class MyApplication extends Application {
  ```java
  MobtuneSDK.setIgnoreActivity("MainActivity");
  MobtuneSDK.setIgnoreActivity("com.sample.MainActivity"); // 같은 이름의 activity 가 있을 경우 패키지명까지 명시...
+ ```
+ 
+ - android Id 전송 관련 
+  - 구글 개인정보 수집 방침에 따라 앱에서 사용자에게 개인정보 수집 동의를 받은 후 아래의 함수를 실행해주시기 바랍니다.
+
+ ```java
+ MobtuneSDK.sendAndroidId();
  ```
