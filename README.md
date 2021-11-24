@@ -109,7 +109,8 @@ public class MyApplication extends Application {
  MobtuneSDK.setIgnoreActivity("com.sample.MainActivity"); // 같은 이름의 activity 가 있을 경우 패키지명까지 명시...
  ```
  
- - android Id 전송 관련 
+ 
+ - android Id 전송 관련
   - 구글 개인정보 수집 방침에 따라 앱에서 사용자에게 개인정보 수집 동의를 받은 후 아래의 함수를 실행해주시기 바랍니다.
 
  ```java
