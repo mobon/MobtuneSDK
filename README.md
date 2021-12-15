@@ -34,7 +34,7 @@ allprojects {
 ```XML
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
-  implementation 'com.android.installreferrer:installreferrer:1.1' // add library
+  implementation 'com.android.installreferrer:installreferrer:2.2' // add library
   implementation 'io.github.mobon:MobtuneSDK:0.9.11' // add library
 }
 ```
