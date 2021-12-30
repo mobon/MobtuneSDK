@@ -101,6 +101,106 @@ public class MyApplication extends Application {
                 
 ```
 
+- 결제 취소 이벤트
+  - 사용자의 결제 취소 이벤트를 추적합니다.
+  - 아래 코드는 필수값들이니 빠짐없이 채워주시기 바랍니다.
+  
+ ```java
+  ProductItem productItem1 = new ProductItem()
+                          .setProductId("test_product_1") // 상품 아이디
+                          .setProductName("뽑기 셋트") //상품명
+                          .setPrice("1000000") //상품 가격
+                          .setQuantity("5"); //상품 개수
+
+  ProductInfo product = new ProductInfo()
+                        .setPaymentMethod(MobtuneParameter.PaymentType.CREDITCARD) //결제방법
+                        .setTotalPrice("5550000") // 총 합계금액
+                        .setProductItems(productItem1) // 생성한 상품 데이터를(ProductItem) 넣어주세요.
+                        .setOrderId("test_orderId") //order ID
+                        .build();
+
+  MobtuneSDK.setEvent(MobtuneEvent.ORDER_CANCLE, new EventParam().setAttribute(MobtuneParameter.PRODUCTS, product));
+                
+```
+
+- 장바구니 담기 이벤트
+  - 사용자의 장바구니 이벤트를 추적합니다.
+  - 아래 코드는 필수값들이니 빠짐없이 채워주시기 바랍니다.
+  
+ ```java
+  ProductItem productItem1 = new ProductItem()
+                          .setProductId("test_product_1") // 상품 아이디
+                          .setProductName("뽑기 셋트") //상품명
+                          .setPrice("1000000") //상품 가격
+                          .setQuantity("5") //상품 개수
+                          .setOption("option"); //상품 옵션 [필수 아님]
+
+  CartInfo cart = new CartInfo()                        
+                        .setProductItems(productItem1) // 생성한 상품 데이터를(ProductItem) 넣어주세요.
+                        .setCartId("test_cartId") // 장바구니 ID
+                        .build();
+
+  MobtuneSDK.setEvent(MobtuneEvent.ADD_CART, new EventParam().setAttribute(MobtuneParameter.PRODUCTS, cart));
+                
+```
+
+- 회원가입 이벤트
+  - 사용자의 회원가입 이벤트를 추적합니다.
+  
+ ```java
+
+  SignUpInfo siginUpInfo = new SignUpInfo()                        
+                        .setUserId("user_id") // 유저 ID    
+                        .setName("홍길동") // 유저 이름 
+                        .setNickName("의적") // 유저 닉네임    
+                        .setGender("M") // 유저 성별 (M[남],W[여])
+                        .setBirthDay("20001010") // 유저 생년월일(8자리)     
+                        .setPhoneNumber("01044556677") // 핸드폰번호 
+                        .setEmail("test@test.com") // 유저 이메일    
+                        .setAddress("서울시 여의도구 여의도동 123-12") // 유저 주소    
+                        .setMarryYn("N") // 결혼여부(Y,N)    
+                        .build();
+
+  MobtuneSDK.setEvent(MobtuneEvent.SIGN_UP, new EventParam().setAttribute(MobtuneParameter.PRODUCTS, siginUpInfo));
+                
+```
+
+- 회원수정 이벤트
+  - 사용자의 회원수정 이벤트를 추적합니다.
+  
+ ```java
+
+  SignUpInfo siginUpInfo = new SignUpInfo()                        
+                        .setUserId("user_id") // 유저 ID    
+                        .setName("홍길동") // 유저 이름 
+                        .setNickName("의적") // 유저 닉네임    
+                        .setGender("M") // 유저 성별 (M[남],W[여])
+                        .setBirthDay("20001010") // 유저 생년월일(8자리)     
+                        .setPhoneNumber("01044556677") // 핸드폰번호 
+                        .setEmail("test@test.com") // 유저 이메일    
+                        .setAddress("서울시 여의도구 여의도동 123-12") // 유저 주소    
+                        .setMarryYn("N") // 결혼여부(Y,N)    
+                        .build();
+
+  MobtuneSDK.setEvent(MobtuneEvent.USER_MODIFY, new EventParam().setAttribute(MobtuneParameter.PRODUCTS, siginUpInfo));
+                
+```
+
+
+- 회원탈퇴 이벤트
+  - 사용자의 회원탈퇴 이벤트를 추적합니다.
+  
+ ```java
+
+  UserInfo userInfo = new UserInfo()                        
+                        .setUserId("user_id") // 유저 ID 
+                        .build();
+
+  MobtuneSDK.setEvent(MobtuneEvent.SIGN_OUT, new EventParam().setAttribute(MobtuneParameter.PRODUCTS, userInfo));
+                
+```
+
+
 ## 5. 그 외 설정
 - 화면 수집 제외 
   - 수집하지 않을 activity 를 설정하시면 수집에서 제외처리합니다.
