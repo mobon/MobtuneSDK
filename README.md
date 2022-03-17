@@ -39,8 +39,6 @@ dependencies {
 }
 ```
 
-```
-
 ** Android 버전에 따른 추가설정
 
 - targetSdkVersion 28 부터 네트워크 통신 시 암호화 되지 않은 HTTP통신이 차단되도록 기본설정이
