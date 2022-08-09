@@ -226,6 +226,28 @@ public class MyApplication extends Application {
 ```
 
 
+- 본상품 이벤트
+  - 상품을 사용자가 확인한 경우 발생하는 이벤트를 추적합니다.
+  
+ ```java
+
+  ViewedProduct viewedProduct = new ViewedProduct()
+                                .setProductCode(productCode.getText().toString())    // 상품 코드
+                                .setProductName(productName3.getText().toString())   // 상품 이름
+                                .setPrice(price.getText().toString())                // 상품 가격
+                                .setProductUrl(productUrl.getText().toString())      // 상품 상세 URL
+                                .setImageUrl(imageUrl.getText().toString())          // 상품 대표 이미지 URL
+                                .setDcPrice(dcPrice.getText().toString())            // 상품의 할인된 가격
+                                .setSoldOut(soldOut.getText().toString())            // 상품 품절 여부(Y/N)
+                                .setReferrer(referrer.getText().toString())          // 기타 Referrer
+                                .build();
+
+  EventParam modifyParam = new EventParam().setAttribute(MobtuneParameter.PRODUCTS, viewedProduct);
+  MobtuneSDK.setEvent(MobtuneEvent.VIEWEDPRODUCT, modifyParam);
+                
+```
+
+
 ## 5. 그 외 설정
 - 화면 수집 제외 
   - 수집하지 않을 activity 를 설정하시면 수집에서 제외처리합니다.
