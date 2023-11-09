@@ -35,7 +35,7 @@ allprojects {
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
   implementation 'com.android.installreferrer:installreferrer:2.2' // add library
-  implementation 'io.github.mobon:MobtuneSDK:0.9.12' // add library
+  implementation 'io.github.mobon:MobtuneSDK:0.9.16' // add library
 }
 ```
 
